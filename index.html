@@ -41,68 +41,117 @@ tr:hover{background:var(--background)}
     .container {
         padding: 10px;
     }
+
+    h1 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
     .search-section {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 12px;
     }
+
     .frequency-input-group {
         grid-template-columns: 1fr;
-        gap: 5px;
+        gap: 8px;
     }
+
+    .form-group input, .form-group select {
+        padding: 12px 14px;
+        font-size: 1rem;
+    }
+
     .btn {
         width: 100%;
-        margin-bottom: 8px;
+        padding: 12px 24px;
+        font-size: 1rem;
+        margin-bottom: 10px;
     }
+
     .table-container {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-    }
-    table {
-        min-width: 600px;
-        font-size: 0.85rem;
-    }
-    th, td {
-        padding: 8px 10px;
-        white-space: nowrap;
-    }
-    .checkbox-group {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-    }
-    h1 {
-        font-size: 1.5rem;
         margin-bottom: 20px;
     }
-    .card {
-        padding: 15px;
+
+    table {
+        min-width: 700px;
+        font-size: 0.9rem;
     }
+
+    th, td {
+        padding: 10px 12px;
+        white-space: nowrap;
+        font-size: 0.9rem;
+    }
+
+    .checkbox-group {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
     .results-info {
         flex-direction: column;
         align-items: flex-start;
+        gap: 10px;
     }
+
     .btn-secondary {
         width: 100%;
         margin-top: 8px;
     }
-}
 
-/* ===== SMÅ SKÆRME ===== */
-@media (max-width: 480px) {
-    .search-section {
-        gap: 8px;
+    .checkbox-item {
+        padding: 10px 12px;
     }
-    .checkbox-group {
-        grid-template-columns: 1fr;
-    }
-    .form-group input, .form-group select {
-        padding: 8px 12px;
+
+    .checkbox-item label {
         font-size: 0.9rem;
     }
-    table {
-        font-size: 0.8rem;
+}
+
+/* ===== SMÅ SKÆRME (iPhone SE, etc.) ===== */
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
     }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .search-section {
+        gap: 10px;
+    }
+
+    .form-group input, .form-group select {
+        padding: 11px 13px;
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 11px 20px;
+        font-size: 0.95rem;
+    }
+
+    table {
+        font-size: 0.85rem;
+        min-width: 650px;
+    }
+
     th, td {
-        padding: 6px 8px;
+        padding: 9px 10px;
+        font-size: 0.85rem;
+    }
+
+    .checkbox-group {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -111,11 +160,15 @@ tr:hover{background:var(--background)}
     .search-section {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .checkbox-group {
         grid-template-columns: repeat(3, 1fr);
     }
-}
 
+    table {
+        font-size: 0.95rem;
+    }
+}
 @media (max-width:768px){.search-section{grid-template-columns:1fr}.checkbox-group{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}th,td{padding:8px 10px;font-size:0.9rem}}
 </style>
 </head>

@@ -36,147 +36,85 @@ tr:hover{background:var(--background)}
 .error{background:#fef2f2;color:#dc2626;padding:15px;border-radius:8px;margin-bottom:20px;border:1px solid #fecaca}
 .toggle-all{background:none;border:none;color:var(--primary);cursor:pointer;font-size:0.9rem;padding:5px 0}
 
-/* ===== STOR SKÆRM (Desktop) - Standard ===== */
-.search-section {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-}
-
-/* ===== MOBIL OPTIMERING - Alt ovenpå hinanden ===== */
+/* ===== RESPONSIV DESIGN - ALT STORT OG LÆSBART ===== */
 @media (max-width: 768px) {
-    /* Generel layout */
-    body {
-        padding: 12px;
-    }
-
+    /* Layout */
+    .container { padding: 12px; }
+    
     /* Overskrifter */
-    h1 {
-        font-size: 1.6rem !important;
-        margin-bottom: 20px !important;
-    }
-
-    h2 {
-        font-size: 1.3rem !important;
-    }
-
-    h3 {
-        font-size: 1.1rem !important;
-    }
-
+    h1 { font-size: 1.8rem; margin-bottom: 20px; }
+    h2 { font-size: 1.4rem; margin: 15px 0; }
+    h3 { font-size: 1.2rem; }
+    
     /* Cards */
-    .card {
-        padding: 20px !important;
-        margin-bottom: 15px !important;
-    }
-
+    .card { padding: 20px; margin-bottom: 15px; }
+    
     /* Søgefelter - ALT ovenpå hinanden */
-    .search-section {
-        grid-template-columns: 1fr !important;
-        gap: 15px !important;
+    .search-section { 
+        grid-template-columns: 1fr !important; 
+        gap: 15px !important; 
     }
-
-    .frequency-input-group {
-        grid-template-columns: 1fr !important;
-        gap: 10px !important;
+    
+    .frequency-input-group { 
+        grid-template-columns: 1fr !important; 
+        gap: 10px !important; 
     }
-
-    /* Større input-felter */
-    .form-group input,
+    
+    /* STØRRE input-felter */
+    .form-group input, 
     .form-group select {
-        padding: 14px 16px !important;
-        font-size: 1.1rem !important;
-        border-radius: 8px !important;
+        padding: 16px 18px !important;
+        font-size: 1.2rem !important;
     }
-
-    /* Større knapper */
+    
+    /* STØRRE knapper */
     .btn {
-        padding: 14px 24px !important;
-        font-size: 1.1rem !important;
+        padding: 16px 24px !important;
+        font-size: 1.2rem !important;
         width: 100% !important;
         margin-bottom: 12px !important;
     }
-
+    
     /* Tabel */
-    .table-container {
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch !important;
-        margin: 15px 0 !important;
+    .table-container { 
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
+        margin: 15px 0; 
     }
-
-    table {
-        min-width: 700px !important;
-        font-size: 1rem !important;
+    
+    table { 
+        min-width: 700px; 
+        font-size: 1.1rem; 
     }
-
-    th, td {
-        padding: 12px 14px !important;
-        font-size: 1rem !important;
+    
+    th, td { 
+        padding: 14px 16px !important; 
+        font-size: 1.1rem !important; 
     }
-
-    /* Checkbox grupper */
-    .checkbox-group {
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
+    
+    /* Checkbox */
+    .checkbox-group { 
+        grid-template-columns: 1fr !important; 
+        gap: 12px !important; 
     }
-
-    .checkbox-item {
-        padding: 12px !important;
+    
+    .checkbox-item { 
+        padding: 12px 14px !important; 
     }
-
-    .checkbox-item label {
-        font-size: 1rem !important;
+    
+    .checkbox-item label { 
+        font-size: 1.1rem !important; 
     }
-
-    /* Resultater info */
-    .results-info {
-        flex-direction: column !important;
-        gap: 12px !important;
+    
+    /* Resultater */
+    .results-info { 
+        flex-direction: column !important; 
+        gap: 12px !important; 
     }
-
-    .btn-secondary {
-        width: 100% !important;
-    }
-
-    /* Scroll-to-top knap */
-    #scrollToTop {
-        width: 56px !important;
-        height: 56px !important;
-    }
-}
-
-/* ===== SMÅ SKÆRME (iPhone SE, etc.) ===== */
-@media (max-width: 480px) {
-    body {
-        padding: 10px !important;
-    }
-
-    h1 {
-        font-size: 1.5rem !important;
-    }
-
-    .card {
-        padding: 15px !important;
-    }
-
-    .form-group input,
-    .form-group select {
-        padding: 13px 15px !important;
-        font-size: 1rem !important;
-    }
-
-    .btn {
-        padding: 13px 20px !important;
-        font-size: 1rem !important;
-    }
-
-    table {
-        min-width: 650px !important;
-        font-size: 0.95rem !important;
-    }
-
-    th, td {
-        padding: 10px 12px !important;
-        font-size: 0.95rem !important;
+    
+    .btn-secondary { 
+        width: 100% !important; 
+        margin-top: 10px !important; 
     }
 }
 

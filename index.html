@@ -36,140 +36,150 @@ tr:hover{background:var(--background)}
 .error{background:#fef2f2;color:#dc2626;padding:15px;border-radius:8px;margin-bottom:20px;border:1px solid #fecaca}
 .toggle-all{background:none;border:none;color:var(--primary);cursor:pointer;font-size:0.9rem;padding:5px 0}
 
-/* ===== MOBIL OPTIMERING ===== */
+/* ===== STOR SKÆRM (Desktop) - Standard ===== */
+.search-section {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+/* ===== MOBIL OPTIMERING - Alt ovenpå hinanden ===== */
 @media (max-width: 768px) {
-    .container {
-        padding: 10px;
+    /* Generel layout */
+    body {
+        padding: 12px;
     }
 
+    /* Overskrifter */
     h1 {
-        font-size: 1.4rem;
-        margin-bottom: 15px;
+        font-size: 1.6rem !important;
+        margin-bottom: 20px !important;
     }
 
+    h2 {
+        font-size: 1.3rem !important;
+    }
+
+    h3 {
+        font-size: 1.1rem !important;
+    }
+
+    /* Cards */
     .card {
-        padding: 15px;
-        margin-bottom: 15px;
+        padding: 20px !important;
+        margin-bottom: 15px !important;
     }
 
+    /* Søgefelter - ALT ovenpå hinanden */
     .search-section {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
     }
 
     .frequency-input-group {
-        grid-template-columns: 1fr;
-        gap: 8px;
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
     }
 
-    .form-group input, .form-group select {
-        padding: 12px 14px;
-        font-size: 1rem;
+    /* Større input-felter */
+    .form-group input,
+    .form-group select {
+        padding: 14px 16px !important;
+        font-size: 1.1rem !important;
+        border-radius: 8px !important;
     }
 
+    /* Større knapper */
     .btn {
-        width: 100%;
-        padding: 12px 24px;
-        font-size: 1rem;
-        margin-bottom: 10px;
+        padding: 14px 24px !important;
+        font-size: 1.1rem !important;
+        width: 100% !important;
+        margin-bottom: 12px !important;
     }
 
+    /* Tabel */
     .table-container {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        margin-bottom: 20px;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        margin: 15px 0 !important;
     }
 
     table {
-        min-width: 700px;
-        font-size: 0.9rem;
+        min-width: 700px !important;
+        font-size: 1rem !important;
     }
 
     th, td {
-        padding: 10px 12px;
-        white-space: nowrap;
-        font-size: 0.9rem;
+        padding: 12px 14px !important;
+        font-size: 1rem !important;
     }
 
+    /* Checkbox grupper */
     .checkbox-group {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    .results-info {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .btn-secondary {
-        width: 100%;
-        margin-top: 8px;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
     }
 
     .checkbox-item {
-        padding: 10px 12px;
+        padding: 12px !important;
     }
 
     .checkbox-item label {
-        font-size: 0.9rem;
+        font-size: 1rem !important;
+    }
+
+    /* Resultater info */
+    .results-info {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    .btn-secondary {
+        width: 100% !important;
+    }
+
+    /* Scroll-to-top knap */
+    #scrollToTop {
+        width: 56px !important;
+        height: 56px !important;
     }
 }
 
 /* ===== SMÅ SKÆRME (iPhone SE, etc.) ===== */
 @media (max-width: 480px) {
     body {
-        padding: 8px;
+        padding: 10px !important;
     }
 
     h1 {
-        font-size: 1.3rem;
+        font-size: 1.5rem !important;
     }
 
-    .search-section {
-        gap: 10px;
+    .card {
+        padding: 15px !important;
     }
 
-    .form-group input, .form-group select {
-        padding: 11px 13px;
-        font-size: 0.95rem;
+    .form-group input,
+    .form-group select {
+        padding: 13px 15px !important;
+        font-size: 1rem !important;
     }
 
     .btn {
-        padding: 11px 20px;
-        font-size: 0.95rem;
+        padding: 13px 20px !important;
+        font-size: 1rem !important;
     }
 
     table {
-        font-size: 0.85rem;
-        min-width: 650px;
+        min-width: 650px !important;
+        font-size: 0.95rem !important;
     }
 
     th, td {
-        padding: 9px 10px;
-        font-size: 0.85rem;
-    }
-
-    .checkbox-group {
-        grid-template-columns: 1fr;
+        padding: 10px 12px !important;
+        font-size: 0.95rem !important;
     }
 }
 
-/* ===== TABLET OPTIMERING ===== */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .search-section {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .checkbox-group {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    table {
-        font-size: 0.95rem;
-    }
-}
-@media (max-width:768px){.search-section{grid-template-columns:1fr}.checkbox-group{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}th,td{padding:8px 10px;font-size:0.9rem}}
 </style>
 </head>
 <body>
